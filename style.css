@@ -1,0 +1,46 @@
+.titleNavBar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
+body {
+    background-image:url(assets/img/backgroundtop.jpg);
+    background-attachment:fixed;
+}
+.carouselImg {
+    margin: 0 auto;    
+    width: 100%;
+}
+.titleHome {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #ffd684;
+    text-align: center;
+}
+.twitterBox {
+    margin: 0 auto;
+}
+.articleBox {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px; 
+    font-weight: bold;
+    text-align: center;             
+}
+.pageDown{
+    background-color: #212529;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.placeCopy {
+    text-align: center;
+}
+a:link, a:visited {
+      color: white;
+      text-decoration: none;
+   }
+  

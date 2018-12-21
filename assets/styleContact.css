@@ -1,0 +1,42 @@
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+    text-align: center;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+}
+.backG {
+    background-color: #FFD684;
+}
+.underLine {
+    width: 40%;
+    color: whitesmoke;
+    height: 5px;
+    background-color: white;
+
+}
+.emptyField {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    border-width:5px;
+    border-style: solid;
+    border-color: whitesmoke;
+}
+.sizeBox {
+    width: 100%;
+    height: 9em;
+    
+}
+.centerSizeBox {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+    margin-left: 25%;
+}
+.tittleNavBar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+}
