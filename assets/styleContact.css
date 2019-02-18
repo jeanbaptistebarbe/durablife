@@ -17,6 +17,13 @@ p {
     background-color: white;
 
 }
+.underLineTitle {
+    width: 40%;
+    color: #FFD684;
+    height: 5px;
+    background-color: #FFD684;
+
+}
 .emptyField {
     text-align: center;
     color: black;

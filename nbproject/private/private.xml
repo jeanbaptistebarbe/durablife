@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jean-baptiste/www/durablife/index.php</file>
-            <file>file:/home/jean-baptiste/www/durablife/signup.php</file>
-            <file>file:/home/jean-baptiste/www/durablife/articles.php</file>
+            <file>file:/home/jean-baptiste/www/durablife/model/member.php</file>
+            <file>file:/home/jean-baptiste/www/durablife/header.php</file>
+            <file>file:/home/jean-baptiste/www/durablife/profil.php</file>
             <file>file:/home/jean-baptiste/www/durablife/style.css</file>
-            <file>file:/home/jean-baptiste/www/durablife/contact.php</file>
+            <file>file:/home/jean-baptiste/www/durablife/profilDelete.php</file>
         </group>
     </open-files>
 </project-private>

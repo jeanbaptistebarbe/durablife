@@ -43,4 +43,47 @@ a:link, a:visited {
       color: white;
       text-decoration: none;
    }
-  
+   .profilFile {
+       background-color: #5a6268;
+   }
+   .titleArticle {
+       margin-left: auto;
+       margin-right: auto;
+   }
+   .sessionMail {
+       font-family: 'Poppins', sans-serif;
+       font-size: 15px;
+    font-weight: bold;
+    background-color: #ffd684;
+   }
+   .isOk {
+       font-family: 'Poppins', sans-serif;
+       font-size: 15px;
+    font-weight: bold;
+    background-color: #090;
+   }
+   .deleteProfil{
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+   }
+   .deleteProfilImg{
+      margin-left: 36%;
+      width: 24%;
+   }
+   .profilModify {
+       background-color: #FFD684;
+   }
+   .pictureProfil{
+       margin-left: 35%; 
+      margin-right: 35%;
+   }
+   .titleProfil{
+       font-family: 'Poppins', sans-serif;
+       font-weight: bold;
+       font-size: 25px;
+      margin-left: 35%; 
+      margin-right: 30%;
+      text-align: center;
+   }
