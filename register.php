@@ -21,14 +21,14 @@ include 'controller/registerCtrl.php';
                 <div class="col-sm">
                     <p>Votre date de naissance</p>
                     <input type="date" name="birthdate" placeholder="Date de Naissance" required/>             
-                    <?= isset($formError['firstname']) ? $formError['firstname'] : '';?>
+                    <?= isset($formError['birthdate']) ? $formError['birthdate'] : '';?>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm">
                     <p>Votre Email</p>
-                    <input type="email" name="mail" id="mail" placeholder="Mail" required/>
+                    <input type="email" name="mail" placeholder="Mail" required/>
                     <?= isset($formError['mail']) ? $formError['mail'] : '';?>
                     <div class="mailMessage"></div>
                 </div>
@@ -54,7 +54,7 @@ include 'controller/registerCtrl.php';
         </form>
     </div>             
 </div> 
-<script src="assets/js/script.js" type="text/javascript"></script>
+
 </body>
 <?php
 include 'footer.php';

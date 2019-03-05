@@ -8,9 +8,9 @@
         <div class="row">
             <div class="pageDown col-sm-12 col-md-4 col-xl-4">
                 <div class="">
-                    <div>conditions d'utilisations</div>
-                    <div>confidentialité</div>
-                    <div>cookies</div>
+                    <a href="legalMention.php"><div>conditions d'utilisations</div></a>
+                    <a href="legalMention.php"><div>confidentialité</div></a>
+                    <a href="legalMention.php"><div>cookies</div></a>
                 </div>
             </div>
             <div class="pageDown col-sm-12 col-md-4 col-xl-4">

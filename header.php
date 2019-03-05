@@ -1,17 +1,21 @@
 <?php
 include 'model/member.php';
+include 'model/article.php';
+include 'model/note.php';
+include 'model/comment.php';
 session_start();
 $members = new members();
 $formError = array();
 $mail = '';
 $password = '';
-
+//Je n'include pas un ctrl de header car mon header est include deja sur toute les pages
+// et 2 ctrl pour une vue est impossible.
 if (isset($_POST['submitConnexion'])) {
     if (!empty($_POST['mailConnexion'])) {
         if (filter_var($_POST['mailConnexion'], FILTER_VALIDATE_EMAIL)) {
             $mail = htmlspecialchars($_POST['mailConnexion']);
         } else {
-            $formError['mailConnexion'] = 'Le courriel n\'est pas valide';
+            $formError['mailConnexion'] = 'Le mail n\'est pas valide';
         }
     } else {
         $formError['mailConnexion'] = 'Veuillez renseigner un courriel';
@@ -49,6 +53,7 @@ if (isset($_POST['submitConnexion'])) {
         <title>Durablife</title>
         <!-- Library -->      
         <script src="assets/js/jquery-3.3.1.js"></script>
+        <script src="assets/js/script.js" type="text/javascript"></script>
         <script type="text/javascript" src="assets/js/ckeditor/ckeditor.js"></script>
         <script type="text/javascript" src="assets/js/ckeditor/adapters/jquery.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -97,6 +102,15 @@ if (isset($_POST['submitConnexion'])) {
                        }
                        ?></div></a>
                 </li>
+                <?php
+                if(!empty($_SESSION) and $_SESSION['id_myd_grade'] === '1') {
+                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link titleNavBar" href="spaceAdmin.php">admin</a>
+                    </li>
+                    <?php
+                }
+                ?>
             </ul>
         </div>
         <div  class="titleNavBar">Durablife</div>

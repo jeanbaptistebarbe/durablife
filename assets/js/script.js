@@ -1,10 +1,12 @@
 $(function () {
     $('#mail').blur(function () {
         //j'appel l'AJAX
-        //$.post prend en paramètre la page PHP qui va effectuer le traitement, la variable que l'on communique au PHP, et la fonction de traitement avec la réponse de PHP.
-        $.post('controller/register.php', {mailTest: $(this).val()}, function (data) {
+        //$.post prend en paramètre la page PHP qui va effectuer le traitement, la variable que l'on communique au PHP 
+        //et la fonction de traitement avec la réponse de PHP.
+        $.post('controller/registerCtrl.php', {
+            mailTest: $(this).val()}, function (data) {
             //dans data se trouve ce que le PHP a envoyé via son echo
-            if(data == 0){
+            if(data === 0){
                 //Le .html permet d'écrire du contenu HTML dans un élément. Ici dans la div qui a la classe mailMessage
                 $('.mailMessage').html('<p class="text-success">L\'adresse mail est disponible</p>');
             }else{
@@ -12,5 +14,5 @@ $(function () {
             }
         });
     });
-})
+});
 

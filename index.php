@@ -18,6 +18,7 @@
     <body> 
         <?php
         include 'header.php';
+        include 'controller/indexCtrl.php';
         ?>
         <div class="container-fluid">
             <!-- Carousel bootstrap -->
@@ -60,8 +61,15 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-8 col-xl-8">
-                    <div class="">
-                        <p>L'article le mieux noté</p> 
+                    <div>
+                        <div class="commentHome">Les derniers commentaires </div>
+                        <?php foreach ($commentListLim as $comment) { ?>          
+                            <div class="row col-sm-12 col-md-12 col-xl-12 listCom viewArticle"> 
+                                <div class="col-sm-12 col-md-12 col-xl-12"><?= $comment->date ?> par <?= $comment->firstname ?> :</div>               
+                                <div class="col-sm-12 col-md-12 col-xl-12">" <?= $comment->textComment ?> "
+                                </div>               
+                            </div>         
+                        <?php } ?> 
                     </div>
                 </div>
             </div>

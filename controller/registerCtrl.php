@@ -24,52 +24,52 @@ if (isset($_POST['submit'])) {
         if (preg_match($nameRegex, $_POST['name'])) {
             $name = htmlspecialchars($_POST['name']);
         } else {
-            $formError['name'] = '<div>le champs nom n\'est pas valide</div>';
+            $formError['name'] = '<div class="errorMessage">le champs nom n\'est pas valide</div>';
         }
     } else {
-        $formError['name'] = '<div>le champs est vide</div>';
+        $formError['name'] = '<div class="errorMessage">le champs est vide</div>';
     }
     if (!empty($_POST['firstname'])) {
         if (preg_match($nameRegex, $_POST['firstname'])) {
             $firstname = htmlspecialchars($_POST['firstname']);
         } else {
-            $formError['firstname'] = '<div>le champs prénom n\'est pas valide</div>';
+            $formError['firstname'] = '<div class="errorMessage">le champs prénom n\'est pas valide</div>';
         }
     } else {
-        $formError['firstname'] = '<div>le champs est vide</div>';
+        $formError['firstname'] = '<div class="errorMessage">le champs est vide</div>';
     }
     if (!empty($_POST['birthdate'])) {
         $birthdate = htmlspecialchars($_POST['birthdate']);
     } else {
-        $formError['birthdate'] = '<div>le champs n\'est pas valide</div>';
+        $formError['birthdate'] = '<div class="errorMessage">le champs n\'est pas valide</div>';
     }
     if (!empty($_POST['mail'])) {
         if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
             $mail = htmlspecialchars($_POST['mail']);
         } else {
-            $formError['mail'] = '<div>le champs mail n\'est pas valide</div>';
+            $formError['mail'] = '<div class="errorMessage">le champs mail n\'est pas valide</div>';
         }
     } else {
-        $formError['mail'] = '<div>le champs est vide</div>';
+        $formError['mail'] = '<div class="errorMessage">le champs est vide</div>';
     }
     if (!empty($_POST['phone'])) {
         if (preg_match($phoneRegex, $_POST['phone'])) {
             $phone = htmlspecialchars($_POST['phone']);
         } else {
-            $formError['phone'] = '<div>le champs téléphone n\'est pas valide</div>';
+            $formError['phone'] = '<div class="errorMessage">le champs téléphone n\'est pas valide</div>';
         }
     } else {
-        $formError['phone'] = '<div>le champs est vide</div>';
+        $formError['phone'] = '<div class="errorMessage">le champs est vide</div>';
     }
     if (!empty($_POST['password']) && !empty($_POST['passwordVerify'])) {
         if ($_POST['password'] == $_POST['passwordVerify']) {
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         } else {
-            $formError['password'] = '<div>Les mots de passe ne sont pas identiques</div>';
+            $formError['password'] = '<div class="errorMessage">Les mots de passe ne sont pas identiques</div>';
         }
     } else {
-        $formError['password'] = '<div>Veuillez renseigner un mot de passe</div>';
-        $formError['passwordVerify'] = '<div>Veuillez confirmer le mot de passe</div>';
+        $formError['password'] = '<div class="errorMessage">Veuillez renseigner un mot de passe</div>';
+        $formError['passwordVerify'] = '<div class="errorMessage">Veuillez confirmer le mot de passe</div>';
     }
 //verification si un mail existe 
     $membersMail = new members();
@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
             $members->phone = $phone;
             $members->addMember();
         }
-    }else{
+    } else {
         $formError['mail'] = '<div>Adresse mail invalide</div>';
     }
 }

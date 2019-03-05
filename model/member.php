@@ -24,7 +24,6 @@ class members {
      * methode permettant d'ajouter un membre 
      * @return bindValue()
      */
-    //methode pour ajouter un membre dans la db
     public function addMember() {
         $query = 'INSERT INTO `myd_member` (`name`, `firstname`, `password`, `birthdate`, `mail`, `phone`) '
                 . 'VALUES (:name, :firstname, :password, :birthdate, :mail, :phone);';
@@ -63,7 +62,8 @@ class members {
     }
 
     public function profilUpdate() {
-        $query = 'UPDATE `myd_member` SET `name`=:name, `firstname`=:firstname, `birthdate`=:birthdate, `phone`=:phone, `mail`=:mail WHERE `id`= :id';
+        $query = 'UPDATE `myd_member` SET `name`=:name, `firstname`=:firstname, `birthdate`=:birthdate, '
+                . '`phone`=:phone, `mail`=:mail WHERE `id`= :id';
         $queryResult = $this->db->prepare($query);
         $queryResult->bindValue(':name', $this->name, PDO::PARAM_STR);
         $queryResult->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
@@ -73,6 +73,7 @@ class members {
         $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $queryResult->execute();
     }
+
     function checkMail() {
         $query = 'SELECT COUNT(*) AS `nbrMail` FROM `myd_member` WHERE `mail` = :mail';
         $result = $this->db->prepare($query);
@@ -81,13 +82,15 @@ class members {
         $checkMail = $result->fetch(PDO::FETCH_OBJ);
         return $checkMail->nbrMail;
     }
- function getHashMember() {
+
+    function getHashMember() {
         $query = 'SELECT `password` FROM `myd_member` WHERE `mail` = :mail';
         $result = $this->db->prepare($query);
         $result->bindValue(':mail', $this->mail, PDO::PARAM_STR);
         $result->execute();
         return $result->fetch(PDO::FETCH_OBJ);
     }
+
     function getMemberInfo() {
         $query = 'SELECT `id`, `name`, `id_myd_grade` FROM `myd_member` WHERE `mail` = :mail';
         $result = $this->db->prepare($query);
@@ -95,10 +98,25 @@ class members {
         $result->execute();
         return $result->fetch(PDO::FETCH_OBJ);
     }
-    public function profilDelete(){
+
+    public function profilDelete() {
         $query = 'DELETE FROM `myd_member` WHERE `myd_member`.`id`= :idMember';
         $queryResult = $this->db->prepare($query);
-        $queryResult -> bindValue(':idMember', $this->id, PDO::PARAM_INT);
+        $queryResult->bindValue(':idMember', $this->id, PDO::PARAM_INT);
+        return $queryResult->execute();
+    }
+
+    public function getMemberList() {
+        $query = 'SELECT * FROM `myd_member` ORDER BY `id` DESC';
+        $queryResult = $this->db->query($query);
+        return $queryResult->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function passwordUpdate() {
+        $query = 'UPDATE `myd_member` SET `password`=:password WHERE `id`= :id';
+        $queryResult = $this->db->prepare($query);
+        $queryResult->bindValue(':password', $this->password, PDO::PARAM_STR);
+        $queryResult->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $queryResult->execute();
     }
 

@@ -40,50 +40,176 @@ body {
     text-align: center;
 }
 a:link, a:visited {
-      color: white;
-      text-decoration: none;
-   }
-   .profilFile {
-       background-color: #5a6268;
-   }
-   .titleArticle {
-       margin-left: auto;
-       margin-right: auto;
-   }
-   .sessionMail {
-       font-family: 'Poppins', sans-serif;
-       font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+.profilFile {
+    background-color: #5a6268;
+}
+.titleArticle {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sessionMail {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     font-weight: bold;
     background-color: #ffd684;
-   }
-   .isOk {
-       font-family: 'Poppins', sans-serif;
-       font-size: 15px;
+}
+.isOk {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     font-weight: bold;
     background-color: #090;
-   }
-   .deleteProfil{
+}
+.deleteProfil{
     font-family: 'Poppins', sans-serif;
     font-size: 45px;
     font-weight: bold;
     text-align: center;
-   }
-   .deleteProfilImg{
-      margin-left: 36%;
-      width: 24%;
-   }
-   .profilModify {
-       background-color: #FFD684;
-   }
-   .pictureProfil{
-       margin-left: 35%; 
-      margin-right: 35%;
-   }
-   .titleProfil{
-       font-family: 'Poppins', sans-serif;
-       font-weight: bold;
-       font-size: 25px;
-      margin-left: 35%; 
-      margin-right: 30%;
-      text-align: center;
-   }
+}
+.deleteProfilImg{
+    margin-left: 36%;
+    width: 24%;
+}
+.profilModify {
+    background-color: #FFD684;
+}
+.pictureProfil{
+    margin-left: 35%; 
+    margin-right: 35%;
+}
+.titleProfil{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 35%; 
+    margin-right: 30%;
+    text-align: center;
+}
+.listArticles {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #FFD684;
+    border-radius: 25px;
+    height: 50%;
+    border-style: solid;
+    text-align: center;
+}
+.titreReadArticle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #FFD684;
+    border-radius: 25px;
+    border-style: solid;
+    text-align: center;
+}
+.hrArticle {
+    border: 3px solid #212529;
+    border-radius: 2px;
+    width: 40%;
+}
+.legalMention {
+    background-color: #ffe5b2;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.noteSelect {
+
+    margin:auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.viewArticle {
+    overflow: hidden; /* les dépassements seront masqués */
+    word-wrap: break-word; 
+    text-overflow: ellipsis; 
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+.commentResponsive {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-color: #212529;
+    padding: 15px 15px 15px 15px;
+    border-radius: 25px;
+    border-style: solid;
+    border: none;
+    outline: none;
+}
+.commentTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #FFD684;  
+    height: 50%; 
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.listCom {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #212529;
+    border-radius: 25px;
+    height: 100%;
+    border-style: solid;
+    outline: none;
+    text-align: center;
+}
+.profilInfo{
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+.modifPass{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    color: #5a6268;
+    background-color: #FFD684;
+}
+.hrPass {
+    border: 3px solid #5a6268;
+    border-radius: 2px;
+    width: 60%;
+}
+.cadreModif {
+    border-radius: 25px;
+    border-style: solid;
+    font-size: 20px;
+    outline: none;
+     text-align: center;
+     padding: 8%;
+}
+.cadreCenter {
+   padding: 3%; 
+}
+.modifPassTitle{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #5a6268;
+    background-color: #FFD684;
+     padding: 3%;
+}
+.commentHome{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #212529;
+}

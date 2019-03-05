@@ -1,4 +1,5 @@
 <?php
+
 $nameRegex = "/^([a-zA-Z'-]+)$/";
 $phoneRegex = "/^[0-9]{10}$/";
 $name = '';
@@ -72,6 +73,21 @@ if (isset($_POST['submitModify'])) {
         $members->mail = $mail;
         $members->phone = $phone;
         $members->profilUpdate();
+    }
+}
+//Changement de mot de passe
+$pass = '';
+if (isset($_POST['submitPass'])) {
+    // il faut verifier qu'ils sont egaux avant de les hacher (sinon ils seront tjs !=)
+    if (!empty(($_POST['passwordModify1']) === ($_POST['passwordModify2']))) {
+        $pass = password_hash($_POST['passwordModify1'], PASSWORD_BCRYPT);
+    } else {
+        $formError['passwordModify1'] = 'le champs n\'est pas conforme';
+    }
+    //On verifie que le pwd1 et le pwd2 sont bien = alors on execute la methode passwordUpdate()
+    if (count($formError) === 0) {
+        $members->password = $pass;
+        $members->passwordUpdate();
     }
 }
 ?>

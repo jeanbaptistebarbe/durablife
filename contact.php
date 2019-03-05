@@ -17,24 +17,28 @@
         <body>
             <?php
             include 'header.php';
+            include 'controller/contactCtrl.php';
             ?>
             <div class="backG">
                 <div class="container">
                     <h1>Contact</h1>
                     <hr class="underLine">
-                    <form method="POST" action="index.php">
+                    <form method="POST" action="">
                         <div class="row">
                             <div class="col-sm">
                                 <p>Votre Prénom</p>
-                                <input type="text" name="firstName" placeholder="Prenom" required/>
+                                <input type="text" name="firstname" placeholder="Prenom" required/>
+                                <?= isset($formError['firstname']) ? $formError['firstname'] : '';?>
                             </div>
                             <div class="col-sm">
                                 <p>Votre Nom</p>
-                                <input type="text" name="lastName" placeholder="Nom" required/>
+                                <input type="text" name="lastname" placeholder="Nom" required/>
+                                <?= isset($formError['lastname']) ? $formError['lastname'] : '';?>
                             </div>
                             <div class="col-sm">
                                 <p>Votre Email</p>
                                 <input type="email" name="email" placeholder="Mail" required/>
+                                <?= isset($formError['email']) ? $formError['email'] : '';?>
                             </div>
                         </div>
                         <div class="row">
@@ -42,10 +46,11 @@
                                 <hr>
                                 <div class="centerSizeBox">Votre message (250 caractères):</div>
                                 <textarea class="sizeBox" type="text" name="message" maxlength="250"></textarea>
+                                <?= isset($formError['message']) ? $formError['message'] : '';?>
                             </div>
                         </div>
                         <hr>
-                        <input type="submit" value="Valider" class="btn btn-dark"/>
+                        <input type="submit" name="submit" value="Valider" class="btn btn-dark"/>
                     </form>
             </div>             
         </div> 
